@@ -1,13 +1,14 @@
 <script setup>
-import Type from './Type.vue';
-const props = defineProps(['img1', 'img2', 'headline', 'body', 'link', 'eyebrow', 'collage', 'reverse']);
+   import Image from './Image.vue';
+   import Type from './Type.vue';
+   const props = defineProps(['img1', 'img2', 'headline', 'body', 'link', 'eyebrow', 'collage', 'reverse']);
 </script>
 
 <template>
-<div class="carousel-slide col-3" :class="{'collage': props.collage, 'reverse': props.reverse}">
+   <div class="carousel-slide col-3" :class="{'collage': props.collage, 'reverse': props.reverse}">
       <ul>
          <li class="img-col">
-            <img :src="props.img1" />
+            <Image :src="props.img1" />
          </li>
 
          <li class="text-col">
@@ -15,7 +16,7 @@ const props = defineProps(['img1', 'img2', 'headline', 'body', 'link', 'eyebrow'
          </li>
 
          <li class="img-col">
-           <img :src="props.img2" />
+            <Image :src="props.img2" />
          </li>
       </ul>
    </div>
@@ -31,9 +32,9 @@ const props = defineProps(['img1', 'img2', 'headline', 'body', 'link', 'eyebrow'
    }
 
    .text-col {
-     width: 42%;
-  }
+      width: 42%;
+   }
    .img-col {
-     width: 29%;
-  }
+      width: 29%;
+   }
 </style>

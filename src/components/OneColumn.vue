@@ -1,9 +1,10 @@
 <script setup>
-const props = defineProps(['img']);
+	import Image from './Image.vue';
+	const props = defineProps(['img']);
 </script>
 
 <template>
-<div class="carousel-slide image-map">
-	<img :src="props.img" />
-</div>
+	<div class="carousel-slide">
+		<Image :src="props.img" />
+	</div>
 </template>
